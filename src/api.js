@@ -1,6 +1,7 @@
 const express = require('express');
 const serverless = require ('serverless-http');
 var chatRouter = require('./routes/chat');
+var cors = require('cors');
 
 const app = express();
 const router = express.Router();
