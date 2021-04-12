@@ -1,7 +1,14 @@
 const express = require('express');
+var http = require('https');
 const serverless = require ('serverless-http');
 var chatRouter = require('./routes/chat');
-var cors = require('cors');
+const io = require("socket.io")(httpServer, {
+  cors: {
+    origin: "http://localhost:8080",
+    methods: ["GET", "POST"]
+  }
+});
+
 
 const app = express();
 const router = express.Router();
