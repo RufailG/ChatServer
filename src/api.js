@@ -1,11 +1,9 @@
 const express = require('express');
-var http = require('https');
 const serverless = require ('serverless-http');
 var chatRouter = require('./routes/chat');
-var cors = require('cors');
-var socket = require('socket.io');
-
+const cors = require('cors');
 const app = express();
+app.use(cors());
 const router = express.Router();
 
  //E' necessario usare per tutte le route il prefisso /.netlify/functions
